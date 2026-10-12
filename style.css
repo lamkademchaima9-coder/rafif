@@ -1,0 +1,554 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8f3;
+    color: #34483a;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+:root {
+    --green: #405c45;
+    --dark-green: #293d2e;
+    --cream: #faf8f3;
+    --beige: #eee7d8;
+    --pink: #d6a69b;
+}
+
+
+/* NAVBAR */
+
+header {
+    background-color: var(--cream);
+    border-bottom: 1px solid #eae5db;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #c58e7e;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b67f70;
+}
+
+.nav-button {
+    background-color: var(--green);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.main-button:hover {
+    background-color: #283d2e;
+    transform: translateY(-3px);
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.subtitle {
+    color: #a87969;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    line-height: 1.15;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #a87969;
+    font-style: italic;
+}
+
+.description {
+    max-width: 430px;
+    color: #77796f;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: var(--green);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.hero-note {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #888c7d;
+}
+
+.hero-image {
+    height: 490px;
+    position: relative;
+}
+
+.hero-image > img {
+    height: 100%;
+    border-radius: 180px 180px 12px 12px;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 25px;
+    left: -35px;
+
+    background-color: white;
+    padding: 17px 22px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    box-shadow: 0 8px 30px #00000012;
+}
+
+.image-label > span {
+    font-size: 30px;
+    color: #a87969;
+}
+
+.image-label strong {
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.image-label p {
+    font-size: 11px;
+    color: #888;
+}
+
+
+/* ADVANTAGES */
+
+.advantages {
+    background-color: #f0ece2;
+    padding: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+}
+
+.advantage span {
+    font-size: 25px;
+    color: #a87969;
+}
+
+.advantage h3 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.advantage p {
+    color: #858579;
+    font-size: 12px;
+}
+
+
+/* ABOUT */
+
+.about {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-image img {
+    height: 420px;
+    border-radius: 12px;
+}
+
+.about-content h2,
+.section-heading h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.about-content > p:not(.subtitle) {
+    color: #77796f;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--green);
+    border-bottom: 1px solid #a87969;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    background-color: #f1ede4;
+    padding: 85px 35px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #77796f;
+    font-size: 14px;
+}
+
+.product-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background-color: #faf8f3;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px #0000000d;
+}
+
+.product-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    height: 100%;
+    transition: 0.5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #faf8f3;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.category {
+    color: #a87969;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    color: #858579;
+    font-size: 12px;
+    min-height: 42px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.buy-button {
+    border: 1px solid #405c45;
+    border-radius: 25px;
+    padding: 8px 13px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+
+/* BEAUTY BANNER */
+
+.beauty-banner {
+    background-color: var(--dark-green);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.beauty-banner > p {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #d8c6a7;
+    margin-bottom: 15px;
+}
+
+.beauty-banner h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.light-button {
+    display: inline-block;
+    background-color: #faf8f3;
+    color: var(--dark-green);
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.light-button:hover {
+    background-color: #e4d7c1;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.contact > p:not(.subtitle) {
+    color: #77796f;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #f0ece2;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer .logo {
+    font-size: 30px;
+}
+
+footer p {
+    color: #77796f;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.copyright {
+    border-top: 1px solid #ded8cc;
+    margin-top: 25px !important;
+    padding-top: 20px;
+}
+
+
+/* RESPONSIVE - TELEPHONE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-button {
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 22px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-image {
+        height: 350px;
+        margin-left: 20px;
+    }
+
+    .image-label {
+        left: -20px;
+    }
+
+    .advantages {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 65px 22px;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-content h2,
+    .section-heading h2,
+    .contact h2 {
+        font-size: 34px;
+    }
+
+    .products {
+        padding: 65px 22px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .beauty-banner h2 {
+        font-size: 30px;
+    }
+
+}
